@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>our-list</title>
+    <link rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+    <button id="menuBtn" class="menu-btn">📋</button>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Мои списки</h2>
+            <button id="closeSidebarBtn" class="close-btn">✕</button>
+        </div>
+        
+        <div id="listsContainer" class="lists-container">
+            <div class="loading">Загрузка...</div>
+        </div>
+        
+        <div class="sidebar-footer">
+            <input type="text" id="newListName" placeholder="Название нового списка" maxlength="30">
+            <button id="createListBtn" class="create-list-btn">Создать список</button>
+        </div>
+        
+        <div class="invite-section">
+            <input type="text" id="inviteCodeInput" placeholder="Код приглашения">
+            <button id="joinListBtn" class="join-btn">Присоединиться</button>
+        </div>
+        
+        <div class="user-info">
+            <span>ID: <span id="userIdDisplay"></span></span>
+        </div>
+    </div>
+
+    <!-- Оверлей для затемнения -->
+    <div id="overlay" class="overlay"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1 align="center">our-list</h1>
+            <div class="room-info">
+                <span id="roomId">загружаем название вашего списка...</span>
+            </div>
+        </div>
+        <div class="shopping-list" id="shoppingList">
+            <div class="empty-state">
+                Тут ничего нет...
+            </div>
+        </div>
+        <div class="sync-status" id="syncStatus">синхронизация...</div>
+    </div>
+
+    <div class="add-form">
+        <form id="addForm">
+            <input type="text" id="itemInput" placeholder="Добавь что-нибудь тут..." autocomplete="off">
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <div id="toast" class="toast">
+        <span id="toastMessage"></span>
+        <button id="toastUndoBtn" class="toast-undo-btn">отмена</button>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</BODY>
