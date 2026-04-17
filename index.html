@@ -16,11 +16,11 @@
         </div>
         
         <div id="listsContainer" class="lists-container">
-            <div class="loading">Загрузка...</div>
+            <div class="loading">загрузка...</div>
         </div>
         
         <div class="sidebar-footer">
-            <input type="text" id="newListName" placeholder="Название нового списка" maxlength="30">
+            <input type="text" id="newListName" placeholder="Название" maxlength="30">
             <button id="createListBtn" class="create-list-btn">Создать список</button>
         </div>
         
@@ -39,9 +39,10 @@
 
     <div class="container">
         <div class="header">
-            <h1 align="center">our-list</h1>
+            <h1 align="center"><span id="listName">our-list</span></h1>
             <div class="room-info">
-                <span id="roomId">загружаем название вашего списка...</span>
+                <span id="listCode">загрузка...</span>
+                <button id="copyCodeBtn" class="copy-btn" title="Скопировать код">копировать</button>
             </div>
         </div>
         <div class="shopping-list" id="shoppingList">
